@@ -1,255 +1,865 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tourism | Discover the World</title>
-    <meta
-      name="description"
-      content="Tourism is a modern travel website showcasing exciting destinations, luxury packages, and unforgettable experiences."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav container">
-        <div class="brand" aria-label="Tourism home">
-          <span class="brand-mark">T</span>
-          <span>ourism</span>
-        </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incredible India | Tourism</title>
 
-        <ul class="nav-links">
-          <li><a href="#destinations">Destinations</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-        </ul>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        <button class="btn btn-primary">Book a Trip</button>
-      </nav>
+html {
+  scroll-behavior: smooth;
+}
 
-      <section class="hero container">
-        <div class="hero-copy">
-          <p class="eyebrow">Adventure starts here</p>
-          <h1>Travel beyond the ordinary.</h1>
-          <p class="lead">
-            Discover unforgettable places, hidden gems, and exclusive experiences designed
-            for travelers who crave beauty, culture, and excitement.
-          </p>
+body {
+  font-family: Arial, sans-serif;
+  color: #18324f;
+  background: #ffffff;
+}
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#packages">Plan My Trip</a>
-            <a class="btn btn-secondary" href="#destinations">Explore More</a>
-          </div>
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-          <div class="stats" aria-label="Tourism statistics">
-            <div>
-              <strong>150+</strong>
-              <span>Destinations</span>
-            </div>
-            <div>
-              <strong>35K</strong>
-              <span>Happy Travelers</span>
-            </div>
-            <div>
-              <strong>4.9/5</strong>
-              <span>Average Rating</span>
-            </div>
-          </div>
-        </div>
+button, input, select {
+  font: inherit;
+}
 
-        <div class="hero-visual" aria-label="Tourism destination showcase">
-          <div class="image-card main-image-card">
-            <img
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
-              alt="Beautiful coastline with turquoise ocean"
-            />
-          </div>
+button {
+  cursor: pointer;
+}
 
-          <div class="floating-card">
-            <span class="floating-label">Featured Tour</span>
-            <h3>Greek Island Escape</h3>
-            <p>7 nights • Luxury stay • Sunset cruise</p>
-            <strong>$1,490</strong>
-          </div>
-        </div>
-      </section>
-    </header>
+[hidden] {
+  display: none !important;
+}
 
-    <main>
-      <section id="destinations" class="section container">
-        <div class="section-heading">
-          <p class="eyebrow">Top destinations</p>
-          <h2>Places that leave a lasting impression.</h2>
-        </div>
+/* NAVIGATION */
 
-        <div class="destination-grid">
-          <article class="destination-card">
-            <img
-              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
-              alt="Mountain lake scenery"
-            />
-            <div class="card-body">
-              <div class="meta-row">
-                <span>Switzerland</span>
-                <span>$1,200</span>
-              </div>
-              <h3>Alpine Serenity</h3>
-              <p>Snow-capped peaks, crystal lakes, and charming mountain villages.</p>
-            </div>
-          </article>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  background: white;
+  box-shadow: 0 2px 12px #00000010;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-          <article class="destination-card">
-            <img
-              src="https://images.unsplash.com/photo-1526481280695-3c4691f0f4e9?auto=format&fit=crop&w=800&q=80"
-              alt="Ancient temple in Bali"
-            />
-            <div class="card-body">
-              <div class="meta-row">
-                <span>Bali</span>
-                <span>$980</span>
-              </div>
-              <h3>Island Rhythm</h3>
-              <p>Vibrant culture, tropical beaches, and peaceful wellness retreats.</p>
-            </div>
-          </article>
+.logo {
+  color: #12365d;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: bold;
+}
 
-          <article class="destination-card">
-            <img
-              src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80"
-              alt="Beautiful landscape with water and mountains"
-            />
-            <div class="card-body">
-              <div class="meta-row">
-                <span>Kyoto</span>
-                <span>$1,450</span>
-              </div>
-              <h3>Hidden Traditions</h3>
-              <p>Timeless temples, lantern-lit streets, and scenic tea gardens.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+.logo span {
+  color: #f59a23;
+}
 
-      <section id="experience" class="experience section">
-        <div class="container experience-grid">
-          <div class="experience-image">
-            <img
-              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80"
-              alt="Couple walking on a tropical beach"
-            />
-          </div>
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
 
-          <div class="experience-copy">
-            <p class="eyebrow">Why travelers choose us</p>
-            <h2>Tailored journeys for unforgettable memories.</h2>
-            <p>
-              From luxury escapes to adventure-filled getaways, our expert planners curate
-              experiences that reflect your dream itinerary, your style, and your pace.
-            </p>
+nav a {
+  font-size: 14px;
+  transition: color .2s;
+}
 
-            <ul class="feature-list">
-              <li>Curated accommodations and handpicked local guides</li>
-              <li>Flexible itineraries for couples, families, and solo travelers</li>
-              <li>24/7 support and seamless transfers from arrival to departure</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+nav a:hover {
+  color: #f59a23;
+}
 
-      <section id="packages" class="section container">
-        <div class="section-heading">
-          <p class="eyebrow">Featured packages</p>
-          <h2>Choose your next adventure.</h2>
-        </div>
+.plan-btn {
+  background: #17609b;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+}
 
-        <div class="package-grid">
-          <article class="package-card">
-            <span class="tag">Adventure</span>
-            <h3>Himalayan Trail</h3>
-            <p>Experience glacier walks, mountain camps, and scenic viewpoint hikes.</p>
-            <div class="package-footer">
-              <strong>From $1,800</strong>
-              <a href="#">Reserve</a>
-            </div>
-          </article>
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #12365d;
+  font-size: 25px;
+}
 
-          <article class="package-card featured">
-            <span class="tag">Luxury</span>
-            <h3>Maldives Escape</h3>
-            <p>Overwater villas, private dining, and pristine turquoise waters for pure relaxation.</p>
-            <div class="package-footer">
-              <strong>From $2,650</strong>
-              <a href="#">Reserve</a>
-            </div>
-          </article>
+/* HERO SECTION */
 
-          <article class="package-card">
-            <span class="tag">Culture</span>
-            <h3>Morocco Discovery</h3>
-            <p>Explore vibrant souks, desert nights, and centuries-old architecture.</p>
-            <div class="package-footer">
-              <strong>From $1,420</strong>
-              <a href="#">Reserve</a>
-            </div>
-          </article>
-        </div>
-      </section>
+.hero {
+  min-height: 480px;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, #102e50dd, #102e5060, #102e5010),
+    url("https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
 
-      <section id="reviews" class="section testimonials">
-        <div class="container">
-          <div class="section-heading center">
-            <p class="eyebrow">Traveler reviews</p>
-            <h2>What guests are saying.</h2>
-          </div>
+.hero-content {
+  max-width: 650px;
+}
 
-          <div class="testimonial-grid">
-            <blockquote>
-              “Every detail was perfectly organized. The trip felt effortless and unforgettable.”
-              <footer>— Emma &amp; James</footer>
-            </blockquote>
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
 
-            <blockquote>
-              “Our guide introduced us to hidden gems we would never have found on our own.”
-              <footer>— Sofia R.</footer>
-            </blockquote>
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(45px, 7vw, 75px);
+  margin-bottom: 20px;
+}
 
-            <blockquote>
-              “A dream vacation with the right mix of adventure, comfort, and local culture.”
-              <footer>— Daniel M.</footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-    </main>
+.hero p.description {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 25px;
+}
 
-    <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <p class="eyebrow">Start your journey</p>
-          <h2>Let us design your perfect escape.</h2>
-        </div>
-        <a class="btn btn-primary" href="#">Get in Touch</a>
+/* SEARCH */
+
+.search-box {
+  background: white;
+  padding: 8px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 680px;
+}
+
+.search-box input,
+.search-box select {
+  padding: 13px;
+  border: none;
+  outline: none;
+  min-width: 0;
+  flex: 1;
+  color: #18324f;
+  background: white;
+}
+
+.search-box button {
+  background: #17609b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 23px;
+}
+
+#searchMessage {
+  margin-top: 12px;
+  background: white;
+  color: #12365d;
+  border-radius: 8px;
+  padding: 12px;
+  display: none;
+}
+
+/* QUICK LINKS */
+
+.quick-links {
+  padding: 28px 6%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.quick-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.quick-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  background: #e9f2fc;
+}
+
+.quick-link strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.quick-link small {
+  color: #65758b;
+  font-size: 11px;
+}
+
+/* GENERAL SECTIONS */
+
+section.content {
+  padding: 55px 6%;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.section-heading .eyebrow {
+  color: #53718f;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  color: #12365d;
+}
+
+.view-all {
+  color: #17609b;
+  border: none;
+  background: none;
+  font-weight: bold;
+}
+
+/* DESTINATIONS */
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.destination {
+  position: relative;
+  height: 245px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #dce5ed;
+}
+
+.destination img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s;
+}
+
+.destination:hover img {
+  transform: scale(1.08);
+}
+
+.destination::after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(transparent, #000000d9);
+}
+
+.destination-info {
+  position: absolute;
+  z-index: 1;
+  bottom: 18px;
+  left: 15px;
+  color: white;
+}
+
+.destination-info h3 {
+  margin-bottom: 7px;
+  font-size: 19px;
+}
+
+.destination-info p {
+  font-size: 12px;
+}
+
+/* ABOUT INDIA */
+
+.about {
+  background: #f6f8fa;
+  padding: 55px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.about img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.about h2 {
+  margin: 12px 0;
+}
+
+.about p {
+  color: #65758b;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.reasons {
+  display: grid;
+  gap: 24px;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.reason-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffefd9;
+  font-size: 21px;
+}
+
+.reason h4 {
+  margin-bottom: 5px;
+}
+
+.reason p {
+  font-size: 12px;
+}
+
+/* TRIP PLANNER */
+
+.planner {
+  background: #12365d;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.planner h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.planner p {
+  color: #d9e4ef;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.planner button {
+  background: #f59a23;
+  color: #18324f;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 28px 6%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #65758b;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #12365d;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quick-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reasons {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 8px 15px #00000010;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .header-plan {
+    display: none;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 45px 5%;
+    background-position: 60% center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .search-box {
+    flex-wrap: wrap;
+    border-radius: 18px;
+  }
+
+  .search-box input,
+  .search-box select {
+    flex-basis: 40%;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .quick-links {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 5%;
+    gap: 18px 10px;
+  }
+
+  section.content {
+    padding: 40px 5%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 29px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .destination {
+    height: 210px;
+  }
+
+  .destination-info {
+    left: 10px;
+    bottom: 12px;
+  }
+
+  .destination-info h3 {
+    font-size: 16px;
+  }
+
+  .destination-info p {
+    font-size: 10px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+  }
+
+  .about img {
+    height: 230px;
+  }
+
+  .reasons {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 25px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="#home"><span>▲</span> Incredible India</a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#guides">Travel Guides</a>
+    <a href="#about">About India</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="plan-btn header-plan"
+    onclick="document.getElementById('planner').scrollIntoView({behavior:'smooth'})">
+    ✈ Plan Your Trip
+  </button>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Discover the beauty of</div>
+    <h1>Incredible India</h1>
+
+    <p class="description">
+      From majestic mountains to golden beaches, ancient temples
+      to vibrant cities — explore the diverse landscapes, rich
+      culture and timeless heritage of India.
+    </p>
+
+    <form class="search-box" id="searchForm">
+      <input id="destinationInput" type="search"
+        placeholder="Where do you want to go?"
+        aria-label="Destination" required>
+
+      <select id="experience" aria-label="Travel experience">
+        <option value="all">Any experience</option>
+        <option value="adventure">Adventure</option>
+        <option value="culture">Culture & Heritage</option>
+        <option value="beaches">Beaches</option>
+        <option value="nature">Nature</option>
+        <option value="food">Food</option>
+      </select>
+
+      <button type="submit">⌕ Explore</button>
+    </form>
+
+    <div id="searchMessage" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<div class="quick-links" id="guides">
+  <a class="quick-link" href="#destinations">
+    <div class="quick-icon">♧</div>
+    <div><strong>Popular Destinations</strong><small>Top places to visit</small></div>
+  </a>
+
+  <a class="quick-link" href="#about">
+    <div class="quick-icon">▣</div>
+    <div><strong>Travel Guides</strong><small>Tips and itineraries</small></div>
+  </a>
+
+  <a class="quick-link" href="#planner">
+    <div class="quick-icon">☼</div>
+    <div><strong>Best Time to Visit</strong><small>Seasonal recommendations</small></div>
+  </a>
+
+  <a class="quick-link" href="#about">
+    <div class="quick-icon">◎</div>
+    <div><strong>Local Experiences</strong><small>Food, culture, adventure</small></div>
+  </a>
+
+  <a class="quick-link" href="#planner">
+    <div class="quick-icon">▣</div>
+    <div><strong>Plan Your Trip</strong><small>Customise your journey</small></div>
+  </a>
+</div>
+
+<section class="content" id="destinations">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Explore top destinations</p>
+      <h2>Must-Visit Places in India</h2>
+    </div>
+
+    <button class="view-all" id="showAll" type="button">
+      View All Destinations →
+    </button>
+  </div>
+
+  <div class="destination-grid" id="destinationGrid">
+
+    <article class="destination" data-name="Agra"
+      data-tags="culture">
+      <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=85"
+        alt="Taj Mahal in Agra" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Agra</h3>
+        <p>Taj Mahal · Heritage · Culture</p>
       </div>
-    </section>
+    </article>
 
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <div class="brand footer-brand">
-          <span class="brand-mark">T</span>
-          <span>ourism</span>
-        </div>
-        <p>Travel beautifully. Experience deeply.</p>
-        <p class="copyright">© <span id="year"></span> Tourism</p>
+    <article class="destination" data-name="Manali"
+      data-tags="adventure nature">
+      <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85"
+        alt="Himalayan mountains" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Manali</h3>
+        <p>Mountains · Adventure · Nature</p>
       </div>
-    </footer>
+    </article>
 
-    <script src="script.js"></script>
-  </body>
+    <article class="destination" data-name="Goa"
+      data-tags="beaches food">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=85"
+        alt="Beautiful tropical beach" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Goa</h3>
+        <p>Beaches · Nightlife · Relaxation</p>
+      </div>
+    </article>
+
+    <article class="destination" data-name="Jaipur"
+      data-tags="culture">
+      <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=85"
+        alt="Hawa Mahal in Jaipur" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Jaipur</h3>
+        <p>Royalty · History · Culture</p>
+      </div>
+    </article>
+
+    <article class="destination" data-name="Kerala"
+      data-tags="nature food">
+      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=85"
+        alt="Kerala backwaters" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Kerala</h3>
+        <p>Backwaters · Ayurveda · Nature</p>
+      </div>
+    </article>
+
+    <article class="destination" data-name="Varanasi"
+      data-tags="culture">
+      <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=85"
+        alt="Varanasi heritage" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Varanasi</h3>
+        <p>Spirituality · River · Heritage</p>
+      </div>
+    </article>
+
+    <article class="destination" data-name="Ladakh"
+      data-tags="adventure nature">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=85"
+        alt="Mountain scenery" loading="lazy">
+      <div class="destination-info">
+        <h3>📍 Ladakh</h3>
+        <p>High Mountains · Adventure</p>
+      </div>
+    </article>
+
+  </div>
+
+  <p id="noResults" hidden>
+    No matching destination found. Try Agra, Manali, Goa, Jaipur,
+    Kerala, Varanasi or Ladakh.
+  </p>
+</section>
+
+<section class="about" id="about">
+  <img
+    src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=85"
+    alt="Indian heritage architecture" loading="lazy">
+
+  <div>
+    <p class="eyebrow">Why travel India?</p>
+    <h2>More Than Just a Destination</h2>
+    <p>
+      India is a feeling — a mix of colours, flavours, history,
+      spirituality and adventure. Every journey tells a story,
+      and every place has a new surprise waiting for you.
+    </p>
+  </div>
+
+  <div class="reasons">
+    <div class="reason">
+      <div class="reason-icon">⌁</div>
+      <div><h4>Diverse Landscapes</h4>
+        <p>Mountains, beaches, forests and deserts.</p></div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">♙</div>
+      <div><h4>Rich Heritage</h4>
+        <p>Ancient monuments, temples, forts and culture.</p></div>
+    </div>
+
+    <div class="reason">
+      <div class="reason-icon">♡</div>
+      <div><h4>Warm Hospitality</h4>
+        <p>Experience the spirit of Indian hospitality.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="planner" id="planner">
+  <h2>Your India Story Starts Here</h2>
+  <p>Discover new destinations, explore Indian culture and create memories.</p>
+  <button onclick="document.getElementById('destinationInput').focus();document.getElementById('home').scrollIntoView({behavior:'smooth'})">
+    ✈ Start Exploring
+  </button>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div><strong>▲ Incredible India</strong><br>Explore · Experience · Remember</div>
+  <p>College Tourism Project</p>
+  <p>Made with ♥ for travellers</p>
+</footer>
+
+<script>
+// MOBILE NAVIGATION
+const menuBtn = document.getElementById("menuBtn");
+const navigation = document.getElementById("navigation");
+
+menuBtn.addEventListener("click", function () {
+  navigation.classList.toggle("open");
+});
+
+navigation.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navigation.classList.remove("open");
+  });
+});
+
+// DESTINATION SEARCH AND FILTER
+const searchForm = document.getElementById("searchForm");
+const destinationInput = document.getElementById("destinationInput");
+const experience = document.getElementById("experience");
+const destinations = Array.from(
+  document.querySelectorAll(".destination")
+);
+
+const searchMessage = document.getElementById("searchMessage");
+const noResults = document.getElementById("noResults");
+
+searchForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const query = destinationInput.value.trim().toLowerCase();
+  const selectedExperience = experience.value;
+  let count = 0;
+
+  destinations.forEach(function (card) {
+    const name = card.dataset.name.toLowerCase();
+    const tags = card.dataset.tags.split(" ");
+
+    const nameMatches = name.includes(query);
+    const experienceMatches =
+      selectedExperience === "all" ||
+      tags.includes(selectedExperience);
+
+    const matches = nameMatches && experienceMatches;
+
+    card.hidden = !matches;
+
+    if (matches) {
+      count++;
+    }
+  });
+
+  noResults.hidden = count !== 0;
+  searchMessage.style.display = "block";
+
+  searchMessage.textContent = count > 0
+    ? "Found " + count + " matching destination(s)!"
+    : "No match found. Try Agra, Goa, Manali, Jaipur or Kerala.";
+
+  document.getElementById("destinations").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+// SHOW ALL DESTINATIONS
+document.getElementById("showAll").addEventListener("click", function () {
+  destinations.forEach(function (card) {
+    card.hidden = false;
+  });
+
+  destinationInput.value = "";
+  experience.value = "all";
+  noResults.hidden = true;
+  searchMessage.style.display = "none";
+});
+
+// CLICK A DESTINATION CARD
+destinations.forEach(function (card) {
+  card.addEventListener("click", function () {
+    destinationInput.value = card.dataset.name;
+    experience.value = "all";
+
+    searchMessage.style.display = "block";
+    searchMessage.textContent =
+      "You selected " + card.dataset.name +
+      ". Explore this destination using the search above.";
+
+    document.getElementById("home").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
+</body>
 </html>
